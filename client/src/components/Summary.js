@@ -31,12 +31,12 @@ const Summary = () => {
 
         <div className="flex justify-between mb-2">
           <span className="text-subtopic">Gross Earnings</span>
-          <span>{totalDeductions.toFixed(2)}</span>
+          <span>{grossEarnings.toFixed(2)}</span>
         </div>
 
         <div className="flex justify-between mb-2">
           <span className="text-subtopic">Gross Deduction</span>
-          <span>-{grossEarnings.toFixed(2)}</span>
+          <span>-{totalDeductions.toFixed(2)}</span>
         </div>
 
         <div className="flex justify-between mb-2">
