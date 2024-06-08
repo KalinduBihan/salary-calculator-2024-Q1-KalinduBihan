@@ -15,6 +15,7 @@ const SalaryCalculator = () => {
   const [allowances, setAllowances] = useState(initialAllowancesState);
   const [deductions, setDeductions] = useState(initialDeductionsState);
 
+  //adding a allowance
   const addAllowance = () => {
     setAllowances([
       ...allowances,
@@ -22,10 +23,12 @@ const SalaryCalculator = () => {
     ]);
   };
 
+  //removing a allowance
   const deleteAllowance = (id) => {
     setAllowances(allowances.filter((allowance) => allowance.id !== id));
   };
 
+  //allowing a allowance
   const updateAllowance = (id, key, value) => {
     setAllowances(
       allowances.map((allowance) =>
@@ -34,6 +37,7 @@ const SalaryCalculator = () => {
     );
   };
 
+  //adding a deduction
   const addDeduction = () => {
     setDeductions([
       ...deductions,
@@ -41,6 +45,7 @@ const SalaryCalculator = () => {
     ]);
   };
 
+  //removing a deduction
   const deleteDeduction = (id) => {
     setDeductions(deductions.filter((deduction) => deduction.id !== id));
   };
@@ -53,12 +58,14 @@ const SalaryCalculator = () => {
     );
   };
 
+  //reset calculator
   const handleReset = () => {
     setBasicSalary(0);
     setAllowances(initialAllowancesState);
     setDeductions(initialDeductionsState);
   };
 
+  //calculate APIT
   const calculateAPIT = (grossEarnings) => {
     if (grossEarnings <= 100000) return 0;
     if (grossEarnings <= 141667) return grossEarnings * 0.06 - 6000;
@@ -69,6 +76,7 @@ const SalaryCalculator = () => {
     return grossEarnings * 0.36 - 73500;
   };
 
+  //calculate salary
   const calculateSalary = () => {
     const totalEarnings =
       basicSalary +

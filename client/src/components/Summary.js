@@ -5,7 +5,6 @@ const Summary = () => {
   const { calculateSalary } = useContext(SalaryContext);
   const {
     basicSalary,
-    totalEarnings,
     grossEarnings,
     totalDeductions,
     netSalary,
