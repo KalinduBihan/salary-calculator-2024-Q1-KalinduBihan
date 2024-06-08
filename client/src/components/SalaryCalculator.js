@@ -95,6 +95,7 @@ const SalaryCalculator = () => {
     const ctc = grossEarnings + employerEPF + employerETF;
 
     return {
+      basicSalary,
       totalEarnings,
       grossEarnings,
       totalDeductions,
@@ -126,7 +127,7 @@ const SalaryCalculator = () => {
         handleReset,
       }}
     >
-      <div className="flex flex-col items-center p-4 bg-gray-50 min-h-screen">
+      <div className="flex flex-col items-center p-4 bg-gray-50 min-h-screen m-4">
         <div className="flex flex-col lg:flex-row w-full lg:w-auto">
           <div className="w-full lg:w-[680px] bg-custom-white rounded-lg border border-gray-300 p-6 mb-4 lg:mb-0 lg:mr-4">
             <div className="flex items-center justify-between">
