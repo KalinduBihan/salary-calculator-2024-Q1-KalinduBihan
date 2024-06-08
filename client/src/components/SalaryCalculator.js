@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Allowence from "./Allowence";
-import Deduction from "./Deduction"; // Import Deduction component
+import Deduction from "./Deduction";
 import reset from "../assets/reset.png";
 import plus from "../assets/Vector.png";
 
@@ -21,7 +21,7 @@ const SalaryCalculator = () => {
   };
 
   const deleteDeduction = (id) => {
-    setDeductions(deductions.filter((deduction) => deduction.id !== id)); // Fix typo here
+    setDeductions(deductions.filter((deduction) => deduction.id !== id));
   };
 
   return (
